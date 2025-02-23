@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Important Courses Provider</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      line-height: 1.6;
+      background-color: #f5f5f5;
+      color: #333;
+    }
+
+    h1, h2, h3 {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      color: #2c3e50;
+    }
+
+    /* Navigation Bar */
+    .navbar {
+      position: sticky;
+      top: 0;
+      background-color: #2c3e50;
+      color: white;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar h1 {
+      font-size: 1.5em;
+      margin: 0;
+      color: white;
+    }
+
+    .navbar nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 10px;
+      font-size: 1em;
+      transition: color 0.3s ease;
+    }
+
+    .navbar nav a:hover {
+      color: #6c63ff;
+    }
+
+    /* Hero Section */
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+      background: linear-gradient(135deg, #6c63ff, #ff6584);
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 2.5em;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 1.2em;
+      margin-bottom: 30px;
+    }
+
+    .hero .search-bar {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero .search-bar input {
+      padding: 10px;
+      width: 300px;
+      border: none;
+      border-radius: 4px 0 0 4px;
+      font-size: 1em;
+    }
+
+    .hero .search-bar button {
+      padding: 10px 20px;
+      background-color: #2c3e50;
+      color: white;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+      font-size: 1em;
+      transition: background-color 0.3s ease;
+    }
+
+    .hero .search-bar button:hover {
+      background-color: #6c63ff;
+    }
+
+    /* Sections */
+    .section {
+      padding: 40px 20px;
+      background-color: white;
+      margin: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      animation: fadeIn 0.8s ease-out;
+    }
+
+    .section h2 {
+      font-size: 2em;
+      margin-bottom: 20px;
+      color: #2c3e50;
+    }
+
+    /* Course Grid */
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 25px;
+    }
+
+    /* Course Card */
+    .course-card {
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .course-card:hover {
+      transform: translateY(-10px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    }
+
+    .course-image {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+    }
+
+    .course-content {
+      padding: 20px;
+    }
+
+    .course-title {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      color: #2c3e50;
+    }
+
+    .course-provider {
+      color: #7f8c8d;
+      font-size: 0.9em;
+      margin-bottom: 15px;
+    }
+
+    .course-link {
+      display: inline-block;
+      padding: 10px 15px;
+      background-color: #6c63ff;
+      color: white;
+      text-decoration: none;
+      border-radius: 4px;
+      text-align: center;
+      transition: background-color 0.3s ease;
+    }
+
+    .course-link:hover {
+      background-color: #ff6584;
+    }
+
+    /* Footer */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background-color: #2c3e50;
+      color: white;
+      margin-top: 40px;
+    }
+
+    .footer a {
+      color: #6c63ff;
+      text-decoration: none;
+    }
+
+    .footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <div class="navbar">
+    <h1>Important Courses Provider</h1>
+    <nav>
+      <a href="#programming">Programming</a>
+      <a href="#database">Database</a>
+      <a href="#maths">Maths</a>
+      <a href="#physics">Physics</a>
+    </nav>
+  </div>
+
+  <!-- Hero Section -->
+  <div class="hero">
+    <h1>Start Learning Today</h1>
+    <p>Access thousands of free courses and grow your skills.</p>
+    <div class="search-bar">
+      <input id="search-input" type="text" placeholder="Search for courses...">
+      <button id="search-button">Search</button>
+    </div>
+  </div>
+
+  <!-- Programming Section -->
+  <div id="programming" class="section">
+    <h2>Programming Courses</h2>
+    <div class="course-grid" id="programming-courses">
+      <!-- Courses will be dynamically added here -->
+    </div>
+  </div>
+
+  <!-- Database Section -->
+  <div id="database" class="section">
+    <h2>Database Courses</h2>
+    <div class="course-grid" id="database-courses">
+      <!-- Courses will be dynamically added here -->
+    </div>
+  </div>
+
+  <!-- Maths Section -->
+  <div id="maths" class="section">
+    <h2>Maths Courses</h2>
+    <div class="course-grid" id="maths-courses">
+      <!-- Courses will be dynamically added here -->
+    </div>
+  </div>
+
+  <!-- Physics Section -->
+  <div id="physics" class="section">
+    <h2>Physics Courses</h2>
+    <div class="course-grid" id="physics-courses">
+      <!-- Courses will be dynamically added here -->
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <div class="footer">
+    <p>&copy; 2023 Important Courses Provider. All rights reserved.</p>
+    <p>Follow us on <a href="#" target="_blank">Twitter</a> | <a href="#" target="_blank">Facebook</a></p>
+  </div>
+
+  <script>
+    // Sample course data
+    const courses = [
+      {
+        title: "Complete JavaScript Course",
+        url: "https://www.youtube.com/watch?v=bm0OyhwFDuY&list=PLsyeobzWxl7pe_IiTfNyr55kwJPWbgxB5",
+        image: "https://img.youtube.com/vi/bm0OyhwFDuY/maxresdefault.jpg",
+        provider: "YouTube",
+        category: "programming"
+      },
+      {
+        title: "React for Beginners",
+        url: "https://www.youtube.com/watch?v=Ke90Tje7VS0",
+        image: "https://img.youtube.com/vi/Ke90Tje7VS0/maxresdefault.jpg",
+        provider: "YouTube",
+        category: "programming"
+      },
+      {
+        title: "SQL for Beginners",
+        url: "https://www.youtube.com/watch?v=HXV3zeQKqGY",
+        image: "https://img.youtube.com/vi/HXV3zeQKqGY/maxresdefault.jpg",
+        provider: "YouTube",
+        category: "database"
+      },
+      {
+        title: "Calculus for Beginners",
+        url: "https://www.youtube.com/watch?v=Kp2bYWRQylk",
+        image: "https://img.youtube.com/vi/Kp2bYWRQylk/maxresdefault.jpg",
+        provider: "YouTube",
+        category: "maths"
+      },
+      {
+        title: "Physics for Beginners",
+        url: "https://www.youtube.com/watch?v=7R2LdKdqkco",
+        image: "https://img.youtube.com/vi/7R2LdKdqkco/maxresdefault.jpg",
+        provider: "YouTube",
+        category: "physics"
+      }
+    ];
+
+    // Function to display courses
+    function displayCourses(filteredCourses = courses) {
+      const sections = {
+        programming: document.getElementById('programming-courses'),
+        database: document.getElementById('database-courses'),
+        maths: document.getElementById('maths-courses'),
+        physics: document.getElementById('physics-courses')
+      };
+
+      // Clear existing courses
+      for (const section of Object.values(sections)) {
+        section.innerHTML = '';
+      }
+
+      // Add filtered courses to their respective sections
+      filteredCourses.forEach(course => {
+        const courseCard = document.createElement('div');
+        courseCard.className = 'course-card';
+        courseCard.innerHTML = `
+          <img src="${course.image}" class="course-image" alt="${course.title}">
+          <div class="course-content">
+            <h3 class="course-title">${course.title}</h3>
+            <p class="course-provider">${course.provider}</p>
+            <a href="${course.url}" target="_blank" class="course-link">Access Course</a>
+          </div>
+        `;
+        sections[course.category].appendChild(courseCard);
+      });
+    }
+
+    // Search functionality
+    document.getElementById('search-button').addEventListener('click', () => {
+      const searchTerm = document.getElementById('search-input').value.toLowerCase();
+      const filteredCourses = courses.filter(course =>
+        course.title.toLowerCase().includes(searchTerm)
+      );
+      displayCourses(filteredCourses);
+    });
+
+    // Initial load
+    displayCourses();
+  </script>
+</body>
+</html>
